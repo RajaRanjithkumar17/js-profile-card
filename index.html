@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            
+           <div class="col-2">
+            <button id="view">view</button>
+           </div>
+            <div class="col-4"   id="user1">
+
+                <div class="card " id="img1">
+                    <!-- <img src="imges/t3.jpg"  id="userImg1"  class="card-img-top" alt="upload Img"> -->
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">ramm</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button id="like">like <h3 id="count">1</h3></button>
+                      <button id="dislike">dislike <h3 id="count">0</h3></button>
+
+                    </div>
+                  </div> -->
+            </div>
+            <!-- <div class="col-4"   id="user2"> -->
+                <!-- <div class="card"  id="img2"> -->
+                    <!-- <img src="imges/testi3.jpg" id="userImg2" class="card-img-top" alt="upload Img"> -->
+                    <!-- <div class="card-body"> -->
+                      <!-- <h5 class="card-title">ranjith</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button id="like">like <h3 id="count">1</h3></button>
+                      <button id="dislike">dislike <h3 id="count">0</h3></button> -->
+                    <!-- </div>
+                  </div>
+            </div> -->
+            <!-- <div class="col-4"   id="user3"> -->
+                <!-- <div class="card" id="img3" > -->
+                    <!-- <img src="imges/testi5.jpg"  id="userImg3"  class="card-img-top" alt="upload Img"> -->
+                   <!-- / <div class="card-body"> -->
+                      <!-- <h5 class="card-title">mani</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button id="like">like <h3 id="count">0</h3></button>
+                      <button id="dislike">dislike <h3 id="count">1</h3></button> -->
+                    <!-- </div> -->
+                  <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+
+
+<!-- var viewBtn = document.getElementById("view");
+var user1 = document.getElementById("user1");
+var col4 = document.getElementsByClassName("col-4")[0];
+//var user2 = document.getElementById("user2");
+// var user3 = document.getElementById("user3");
+// var userImg1 = document.getElementById("userImg1" )
+
+
+
+
+
+
+function hideuser(){
+    user1.style.display = "none";
+//     user2.style.display = "none";
+//     user3.style.display = "none";
+}
+hideuser();
+
+function disableView(){
+
+    viewBtn.setAttribute("disabled", "disabled");
+}
+
+function showUser(){
+    user1.style.display = "block";
+// user2.style.display = "block";
+//  user3.style.display = "block";
+};
+
+
+
+viewBtn.addEventListener('click',() =>{
+    showUser();
+    disableView();
+
+    
+var img1= document.createElement("div");
+img1.setAttribute("class","card");
+
+var img2= document.createElement("div");
+// img2.setAttribute("class","card");
+
+// var img3= document.createElement("div");
+// img3.setAttribute("class","card");
+    
+    var user1Img = document.createElement("img");
+    user1Img.setAttribute('src',"imges/t3.jpg");
+    user1Img.setAttribute('alt', 'nature');        
+    user1Img.setAttribute('class', 'card-img-top');
+
+
+    var user2Img = document.createElement("img");
+    user2Img.setAttribute('src',"imges/testi3.jpg" );
+    user2Img.setAttribute('alt', 'nature');        
+    user2Img.setAttribute('class', 'card-img-top');
+
+    var user3Img = document.createElement("img");
+    user3Img.setAttribute('src',"imges/testi5.jpg");
+    user3Img.setAttribute('alt', 'nature');        
+    user3Img.setAttribute('class', 'card-img-top');
+    
+   var  cardBody = document.createElement("div"); 
+    cardBody.setAttribute("class","card-body");
+
+    var cardTitile = document.createElement("h5") ;
+    cardTitile.setAttribute("class","card-title");
+    cardTitile.innerText = "Ramm"
+   
+
+    var cardText = document.createElement("p");
+    cardText.setAttribute("class","card-text");
+    cardText.innerText="Sanker"
+
+    var like = document.createElement("button");
+    like.setAttribute("id","like");
+    like.innerText = "like";
+
+    var dislike = document.createElement("button");
+    dislike.setAttribute("id","dislike");
+    dislike.innerText = "dislike";
+    
+    img1.appendChild(user1Img);
+    // img2.appendChild(user2Img);
+    // img3.appendChild(user3Img);
+    cardBody.appendChild(cardTitile);
+    cardBody.appendChild(cardText);
+    cardBody.appendChild(like);
+    cardBody.appendChild(dislike);
+    img1.appendChild(cardBody);
+    col4.appendChild(cardBody)
+
+
+    //img2.appendChild(user2Img);
+    // img2.appendChild(user2Img);
+    // img3.appendChild(user3Img);
+    // cardBody.appendChild(cardTitile);
+    // cardBody.appendChild(cardText);
+    // cardBody.appendChild(like);
+    // cardBody.appendChild(dislike);
+    // img2.appendChild(cardBody);
+
+
+    // col4.appendChild(cardBody) -->
